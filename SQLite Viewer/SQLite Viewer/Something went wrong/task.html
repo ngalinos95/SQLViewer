@@ -1,0 +1,16 @@
+<h5 id="description">Description</h5>
+<p>What if something goes sour? We need to account for unplanned scenarios to avoid application errors. Let's add error handlers to our application.</p>
+<h5 id="objectives">Objectives</h5>
+<p>Pop up a dialog window with an error message if something is wrong. You can use the following statement:</p>
+<pre><code class="java">JOptionPane.showMessageDialog(new Frame(), "ERROR MESSAGE");</code></pre>
+<p>It will open up a new frame with an error message. A user will have to close it to continue using the application.</p>
+<p>Here are the cases to account for:</p>
+<ul>
+<li>If a user enters a wrong file name, pop up a dialog window with the <code class="java">File doesn't exist!</code> error message.</li>
+<li>If a user enters a wrong SQL query, pop up a dialog window with an SQL error message. We won't check the text in the tests.</li>
+</ul>
+<p>Don't forget that a user shouldn't be able to choose tables from the Combobox,  to input a query to the query field, and click the execute button if the program couldn't establish a connection with the database or the database file name is empty.</p>
+<p></p><div class="alert alert-primary">Use setEnabled() method to enable or disable the components.</div><p></p>
+<h5 id="examples">Examples</h5>
+<p><strong>Example 1: </strong><em>Possible interface of the pop-up window</em></p>
+<p><img alt="" src="https://ucarecdn.com/7aca5a91-0641-4dae-97be-d84561f824ae/"/></p>

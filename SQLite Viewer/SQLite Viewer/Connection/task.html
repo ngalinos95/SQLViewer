@@ -1,0 +1,16 @@
+<h5 id="description">Description</h5>
+<p>The main idea of the application is to see the database table contents. So we should be able to find out which tables are included in the database and generate a <code class="language-sql">SELECT</code> query for any table. </p>
+<h5 id="objectives">Objectives</h5>
+<p>Add three more components to the application:</p>
+<ul>
+<li><code class="language-sql">JComboBox</code> with the <code class="language-sql">TablesComboBox</code> name</li>
+<li><code class="language-sql">JTextArea</code> with the <code class="language-sql">QueryTextArea</code> name</li>
+<li><code class="language-sql">JButton</code> with the <code class="language-sql">Execute</code> text. Give it the <code class="language-sql">ExecuteQueryButton</code> name.</li>
+</ul>
+<p>Don't forget about the components from the previous stage.</p>
+<p>Once a user enters the database file name and presses the <code class="language-sql">Open</code> button, establish a connection with the database. Select all public (open) tables from it and put them into the <code class="language-sql">JComboBox</code>. Our app should include an option to select a table and generate a <code class="language-sql">SELECT</code> query for it. This query selects all rows in the table. If a user selects another table in the <code class="language-sql">JComboBox</code>, re-generate a <code class="language-sql">SELECT</code> query for this table. </p>
+<p>Here is the query that can be used to get every public table from an SQLite database:</p>
+<pre><code class="language-sql">SELECT name FROM sqlite_master WHERE type ='table' AND name NOT LIKE 'sqlite_%';</code></pre>
+<h5 id="examples">Examples</h5>
+<p><strong>Example 1: </strong><em>Possible interface of your application</em></p>
+<p><img alt="" src="https://ucarecdn.com/5254c64d-325b-4d2e-8ebb-700739b57b31/"/></p>
